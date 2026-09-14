@@ -1,0 +1,11 @@
+pio project init --board uno
+  --> downloads build env for uno and creates "src" in local folder
+  --> "pio boards" shows all boards
+  
+pio run	                Build/Compile the project (does not upload).
+pio run -t upload	Compile & Upload code to the connected board.
+pio run -t upload -t monitor	                Compile & Upload & Monitor
+pio run -t upload --upload-port /dev/ttyUSB0
+pio run -t clean	Clean build files (useful if facing cache/compilation errors).
+pio device monitor	Open the Serial Monitor to read terminal/debug logs from the board.
+
