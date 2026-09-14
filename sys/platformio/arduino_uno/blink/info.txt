@@ -5,7 +5,15 @@ pio project init --board uno
 pio run	                Build/Compile the project (does not upload).
 pio run -t upload	Compile & Upload code to the connected board.
 pio run -t upload -t monitor	                Compile & Upload & Monitor
+pio run -e uno -t upload                        Install env uno, compile & upload
 pio run -t upload --upload-port /dev/ttyUSB0
 pio run -t clean	Clean build files (useful if facing cache/compilation errors).
 pio device monitor	Open the Serial Monitor to read terminal/debug logs from the board.
+
+pio pkg search <name> search for a lib like "u8g2
+pio pkg install olikraus/U8g2
+
+
+In platformio use something like for local projects
+  lib_deps = ../../../../../../U8g2_Arduino
 
